@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  web:
+    build:
+        context: ./docker/
+        args:
+          - RUBY_VERSION=2.7.2
+    entrypoint: docker/entrypoint.sh
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/wired_chat:cached
+    tty: true
+    stdin_open: true
+
+volumes:
+    gems:
+    rails_cache:
