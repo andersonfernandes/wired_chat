@@ -14,6 +14,7 @@ gem 'webpacker', '~> 5.0'
 
 group :development, :test do
   gem 'pry', '~> 0.13.1'
+  gem 'rspec-rails', '~> 4.0.1'
   gem 'rubocop', '~> 1.7'
 end
 
