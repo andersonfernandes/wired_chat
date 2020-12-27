@@ -28,3 +28,26 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
+
+OmniAuth.config.test_mode = true
+google_omniauth_hash = {
+  'provider' => 'google_oauth2',
+  'uid' => '21321321323132313211',
+  'info' => {
+    'name' => 'John Doe',
+    'email' => 'johndoe@gmail.com',
+    'unverified_email' => 'johndoe@gmail.com',
+    'email_verified' => true,
+    'first_name' => 'John',
+    'last_name' => 'Doe',
+    'image' => 'http://example/image.jpg'
+  },
+  'credentials' => {
+    'token' => 'asdadsae2qe2e12323b32g3h1g3h21g321h3hj3g21h321g3h21g321j321321hg3jh21g31jhg31j',
+    'refresh_token' => 'nsandajdjk2jk4j44j34h2j4j434j3b4j3b4j3b4jb43b43j4jb343j',
+    'expires_at' => 1_609_043_279,
+    'expires' => true
+  }
+}
+
+OmniAuth.config.add_mock(:google, google_omniauth_hash)
