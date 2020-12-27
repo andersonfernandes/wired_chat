@@ -14,6 +14,7 @@ gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
 
 group :development, :test do
+  gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
   gem 'pry', '~> 0.13.1'
   gem 'rubocop', '~> 1.7'
 end

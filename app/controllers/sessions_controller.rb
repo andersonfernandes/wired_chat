@@ -5,12 +5,17 @@ class SessionsController < ApplicationController
       user.name = auth.info.name
       user.email = auth.info.email
     end
-    log_in(@user)
+    login(@user)
     @user.google_token = auth.credentials.token
     refresh_token = auth.credentials.refresh_token
     @user.google_refresh_token = refresh_token if refresh_token.present?
     @user.save
 
+    redirect_to root_path
+  end
+
+  def destroy
+    logout
     redirect_to root_path
   end
 end
