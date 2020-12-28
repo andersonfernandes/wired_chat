@@ -30,4 +30,9 @@ RSpec.describe User, type: :model do
     it { should validate_uniqueness_of(:email).case_insensitive }
     it { should_not allow_values(invalid_emails).for(:email) }
   end
+
+  describe 'associations' do
+    it { should have_many(:sent_messages) }
+    it { should have_many(:received_messages) }
+  end
 end
