@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   root 'home#index'
-  get '/auth/google_oauth2/callback' => 'sessions#google_oauth'
-  delete 'auth/logout' => 'sessions#destroy'
+
+  scope :auth do
+    get 'google_oauth2/callback' => 'sessions#google_oauth'
+    delete 'logout' => 'sessions#destroy'
+  end
+
+  resources :messages, only: :create
 end

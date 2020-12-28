@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
     @user = User.where(email: auth.info.email).first_or_initialize do |user|
       user.name = auth.info.name
       user.email = auth.info.email
+      user.image_url = auth.info.image
     end
     login(@user)
     @user.google_token = auth.credentials.token

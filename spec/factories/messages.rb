@@ -3,5 +3,6 @@ FactoryBot.define do
     text { 'Hi there' }
     target { build(:user) }
     sender { build(:user) }
+    seen { false }
   end
 end
