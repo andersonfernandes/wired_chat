@@ -1,3 +1,5 @@
 <% @chats.each do |chat| %>
-  <div><%= chat_name(chat) %> (<%= chat.messages.size %>)</div>
+  <div>
+    <%= link_to("#{chat_name(chat)} (#{chat.messages.size})", chat_path(chat)) %>
+  </div>
 <% end %>

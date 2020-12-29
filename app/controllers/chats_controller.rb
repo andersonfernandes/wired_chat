@@ -4,4 +4,8 @@ class ChatsController < ApplicationController
   def index
     @chats = current_user.ordered_chats
   end
+
+  def show
+    @chat = Chat.includes(:messages).find(params[:id])
+  end
 end

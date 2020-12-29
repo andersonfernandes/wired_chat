@@ -1,0 +1,12 @@
+<div><%= link_to('Back', :back) %></div>
+
+<div>Talking with <strong><%= chat_name(@chat) %></strong></div>
+
+<div>
+  <% @chat.messages.each do |message| %>
+    <div>
+      <div><%= message.text %></div>
+      <small><%= message.created_at %></small>
+    </div>
+  <% end %>
+</div>
