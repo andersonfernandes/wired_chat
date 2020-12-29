@@ -19,4 +19,8 @@ class User < ApplicationRecord
   validates :email, uniqueness: { case_sensitive: false }
   validates :name, :email, presence: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
+
+  def ordered_chats
+    chats.includes(:messages).order('messages.created_at DESC')
+  end
 end
