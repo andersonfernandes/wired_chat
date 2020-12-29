@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   scope :auth do
     get 'google_oauth2/callback' => 'sessions#google_oauth'
+    get 'login' => 'sessions#new'
     delete 'logout' => 'sessions#destroy'
   end
 

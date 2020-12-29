@@ -1,5 +1,8 @@
 class MessagesController < ApplicationController
-  before_action :authenticated?
+  before_action :authenticate!
+
+  def index
+  end
 
   def create
     @message = Message.new(message_params)

@@ -11,6 +11,10 @@
   </head>
 
   <body>
+    <h1>Wired.Chat</h1>
+
     <%= yield %>
+
+    <%= link_to 'Logout', logout_path, method: :delete if current_user %>
   </body>
 </html>

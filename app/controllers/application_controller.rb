@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
     @current_user = User.find(session[:current_user_id])
   end
 
-  def authenticated?
-    return redirect_to(root_path) unless session[:current_user_id].present?
+  def authenticate!
+    return redirect_to(login_path) unless session[:current_user_id].present?
   end
 end

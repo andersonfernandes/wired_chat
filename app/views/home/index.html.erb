@@ -1,7 +1,0 @@
-<h1>Welcome <%= current_user&.name %> to the Wired.chat</h1>
-
-<% if current_user %>
-  <%= link_to 'Logout', auth_logout_path, method: :delete %>
-<% else %>
-  <%= link_to 'Login with google', '/auth/google_oauth2' %>
-<% end %>
