@@ -5,5 +5,8 @@ FactoryBot.define do
     image_url { 'http://example.com/image.jpg' }
     google_token { 'qwertyuiopasdfghjklzxcvbnm123456' }
     google_refresh_token { nil }
+
+    chats { [] }
+    messages { [] }
   end
 end
