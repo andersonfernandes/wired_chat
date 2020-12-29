@@ -2,26 +2,27 @@
 #
 # Table name: messages
 #
-#  id          :integer          not null, primary key
-#  seen        :boolean          default(FALSE), not null
-#  target_type :string           not null
-#  text        :string           not null
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
-#  sender_id   :integer          not null
-#  target_id   :integer          not null
+#  id         :integer          not null, primary key
+#  seen       :boolean          default(FALSE), not null
+#  text       :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  chat_id    :integer          not null
+#  creator_id :integer          not null
 #
 # Indexes
 #
-#  index_messages_on_sender_id  (sender_id)
+#  index_messages_on_chat_id     (chat_id)
+#  index_messages_on_creator_id  (creator_id)
 #
 # Foreign Keys
 #
-#  sender_id  (sender_id => users.id)
+#  chat_id     (chat_id => chats.id)
+#  creator_id  (creator_id => users.id)
 #
 class Message < ApplicationRecord
-  belongs_to :sender, class_name: 'User'
-  belongs_to :target, polymorphic: true
+  belongs_to :creator, class_name: 'User', inverse_of: :messages
+  belongs_to :chat, inverse_of: :messages
 
-  validates :text, :target, :sender, presence: true
+  validates :text, :creator, presence: true
 end

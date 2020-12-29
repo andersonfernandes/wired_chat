@@ -12,8 +12,9 @@
 #  updated_at           :datetime         not null
 #
 class User < ApplicationRecord
-  has_many :sent_messages, class_name: 'Message', inverse_of: :sender
-  has_many :received_messages, class_name: 'Message', inverse_of: :target
+  has_many :user_chats, inverse_of: :user
+  has_many :chats, through: :user_chats
+  has_many :messages, inverse_of: :creator
 
   validates :email, uniqueness: { case_sensitive: false }
   validates :name, :email, presence: true

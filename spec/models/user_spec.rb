@@ -32,7 +32,8 @@ RSpec.describe User, type: :model do
   end
 
   describe 'associations' do
-    it { should have_many(:sent_messages) }
-    it { should have_many(:received_messages) }
+    it { should have_many(:user_chats) }
+    it { should have_many(:chats) }
+    it { should have_many(:messages) }
   end
 end
