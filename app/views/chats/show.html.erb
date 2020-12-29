@@ -1,12 +1,17 @@
-<div><%= link_to('Back', :back) %></div>
+<div><%= link_to('Back', chats_path) %></div>
 
 <div>Talking with <strong><%= chat_name(@chat) %></strong></div>
 
 <div>
   <% @chat.messages.each do |message| %>
-    <div>
+    <div style="margin-top: 20px;">
+      <small><%= message.creator.email %> says:</small>
       <div><%= message.text %></div>
       <small><%= message.created_at %></small>
     </div>
   <% end %>
+</div>
+
+<div>
+  <%= render partial: 'messages/form', locals: { chat_id: @chat.id } %>
 </div>

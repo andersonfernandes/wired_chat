@@ -1,0 +1,8 @@
+<%= form_with(url: messages_path, method: :post) do |form| %>
+  <%= form.hidden_field :creator_id, value: current_user.id %>
+  <%= form.hidden_field :chat_id, value: chat_id %>
+
+  <%= form.text_field :text, autofocus: true %>
+
+  <%= form.submit 'Send' %>
+<% end %>

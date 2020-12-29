@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   end
 
   resources :chats, only: %i[index show]
+  resources :messages, only: %i[create]
 end

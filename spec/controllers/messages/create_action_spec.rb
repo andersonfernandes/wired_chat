@@ -1,7 +1,15 @@
 require 'rails_helper'
 
-RSpec.xdescribe MessagesController, '#create', type: :controller do
+RSpec.describe MessagesController, '#create', type: :controller do
   let(:current_user) { create(:user) }
+  let(:user) { create(:user) }
+  let(:chat) do
+    chat = create(:chat)
+    create(:user_chat, user: current_user, chat: chat)
+    create(:user_chat, user: user, chat: chat)
+    chat
+  end
+
   let(:create_action) do
     post :create, params: params, session: { current_user_id: current_user.id }
   end
@@ -11,9 +19,8 @@ RSpec.xdescribe MessagesController, '#create', type: :controller do
     let(:params) do
       {
         text: 'Hi there',
-        target_type: target.class,
-        target_id: target.id,
-        sender_id: current_user.id
+        creator_id: current_user.id,
+        chat_id: chat.id
       }
     end 
 
@@ -33,9 +40,8 @@ RSpec.xdescribe MessagesController, '#create', type: :controller do
     let(:params) do
       {
         text: '',
-        target_type: nil,
-        target_id: nil,
-        sender_id: nil
+        creator_id: nil,
+        chat_id: nil
       }
     end 
 
