@@ -12,7 +12,7 @@
 
   <body>
     <h1>Wired.chat</h1>
-    <div><%= link_to 'Logout', logout_path, method: :delete if current_user %></div>
+    <div><%= button_to 'Logout', logout_path, method: :delete if current_user %></div>
 
     <%= yield %>
   </body>
