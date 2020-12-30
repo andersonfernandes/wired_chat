@@ -4,12 +4,10 @@
   <div>Talking with <strong><%= chat_name(@chat) %></strong></div>
 
   <div class="messages">
-    <% @chat.messages.each do |message| %>
-      <div class="message <%= 'me' if message.creator == current_user%>">
-        <small><%= message.creator.email %> says:</small>
-        <div><%= message.text %></div>
-        <small><%= message.created_at %></small>
-      </div>
+    <%= turbo_stream_from 'messages' %>
+
+    <%= turbo_frame_tag 'messages' do %>
+      <%= render @chat.messages %>
     <% end %>
   </div>
 
