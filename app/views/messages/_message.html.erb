@@ -1,5 +1,7 @@
-<div class="message <%= 'me' if message.creator == current_user%>">
-  <small><%= message.creator.email %> says:</small>
-  <div><%= message.text %></div>
-  <small><%= message.created_at %></small>
-</div>
+<%= turbo_frame_tag dom_id(message) do %>
+  <div class="message <%= 'me' if message.creator == current_user%>">
+    <small><%= message.creator.email %> says:</small>
+    <div><%= message.text %></div>
+    <small><%= message.created_at %></small>
+  </div>
+<% end %>

@@ -4,7 +4,7 @@
   <div>Talking with <strong><%= chat_name(@chat) %></strong></div>
 
   <div class="messages">
-    <%= turbo_stream_from 'messages' %>
+    <%= turbo_stream_from @chat, :messages %>
 
     <%= turbo_frame_tag 'messages' do %>
       <%= render @chat.messages %>
