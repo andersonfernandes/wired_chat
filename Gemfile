@@ -11,7 +11,7 @@ gem 'rails', '~> 6.1.0'
 gem 'redis'
 gem 'sass-rails', '>= 6'
 gem 'sqlite3', '~> 1.4'
-gem 'turbo-rails'
+gem 'turbo-rails', github: 'hotwired/turbo-rails', branch: 'main'
 gem 'webpacker', '~> 5.0'
 
 group :development, :test do
