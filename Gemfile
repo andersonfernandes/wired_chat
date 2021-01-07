@@ -6,11 +6,11 @@ ruby '2.7.2'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'jbuilder', '~> 2.7'
 gem 'omniauth-google-oauth2'
+gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 6.1.0'
 gem 'redis'
 gem 'sass-rails', '>= 6'
-gem 'sqlite3', '~> 1.4'
 gem 'turbo-rails', github: 'hotwired/turbo-rails', branch: 'main'
 gem 'webpacker', '~> 5.0'
 

@@ -1,6 +1,12 @@
 version: '3.7'
 
 services:
+  postgres:
+    image: postgres:11
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    volumes:
+      - postgres:/var/lib/postgresql/data
   redis:
     image: redis:6.0.9
   web:
@@ -8,8 +14,14 @@ services:
         context: ./docker/
         args:
           - RUBY_VERSION=2.7.2
+    environment:
+      - DATABASE_USERNAME=postgres
+      - DATABASE_PASSWORD=
+      - DATABASE_HOST=postgres
+      - DATABASE_PORT=5432
     depends_on:
       - redis
+      - postgres
     entrypoint: docker/entrypoint.sh
     ports:
       - "5000:5000"
@@ -20,4 +32,5 @@ services:
 
 volumes:
     gems:
+    postgres:
     rails_cache:
