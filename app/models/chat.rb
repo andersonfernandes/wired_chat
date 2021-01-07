@@ -9,9 +9,9 @@
 #  updated_at :datetime         not null
 #
 class Chat < ApplicationRecord
-  has_many :user_chats, inverse_of: :chat 
+  has_many :user_chats, inverse_of: :chat
   has_many :users, through: :user_chats
-  has_many :messages, inverse_of: :chat 
+  has_many :messages, inverse_of: :chat
 
   enum category: %i[personal pool]
 
