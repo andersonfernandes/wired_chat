@@ -8,11 +8,12 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbo-track': 'reload' %>
+
+    <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css" data-turbo-track="reload">
   </head>
 
-  <body>
-    <h1>Wired.chat</h1>
-    <div><%= button_to 'Logout', logout_path, method: :delete if current_user %></div>
+  <body class="container">
+    <%= render 'layouts/menu' %>
 
     <%= yield %>
   </body>
