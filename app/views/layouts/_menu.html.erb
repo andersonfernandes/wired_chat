@@ -2,19 +2,20 @@
   <div class="navbar-brand">
     <h1 class="navbar-item is-size-4 has-text-weight-bold">Wired.chat</h1>
 
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="menuContent">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
   </div>
 
-  <div class="navbar-menu">
+  <div id="menuContent" class="navbar-menu">
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
           <%= button_to(logout_path, method: :delete, class: 'button') do %>
             <i class="icon mdi mdi-logout"></i>
+            <span>Logout</span>
           <% end if current_user %>
         </div>
       </div>
