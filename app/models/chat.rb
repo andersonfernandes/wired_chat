@@ -17,4 +17,8 @@ class Chat < ApplicationRecord
 
   validates :category, presence: true
   validates :name, presence: true, allow_blank: false, if: -> { pool? }
+
+  def other_users(user)
+    users.reject { |u| user.id == u.id }
+  end
 end

@@ -1,5 +1,31 @@
-<% @chats.each do |chat| %>
-  <div>
-    <%= link_to("#{chat_name(chat)} (#{chat.messages.size})", chat_path(chat)) %>
-  </div>
-<% end %>
+<h3 class="title is-6">Recent chats:</h3>
+
+<div class="columns">
+  <% @chats.each do |chat| %>
+    <%= link_to(chat_path(chat), class: 'column is-one-third') do %>
+      <div class="box">
+        <article class="media">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <%= chat_image(chat) %>
+            </figure>
+          </div>
+
+          <div class="media-content">
+            <div class="content">
+              <strong> <%= "#{chat_name(chat)} (#{chat.messages.size})" %> </strong>
+
+              <div>
+                <small><%= chat_info(chat) %></small>
+              </div>
+
+              <div>
+                <small>Last Message at: <%= chat_last_message_at(chat) %></small>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    <% end %>
+  <% end %>
+</div>
