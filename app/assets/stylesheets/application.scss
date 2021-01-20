@@ -1,26 +1,6 @@
 @import "bulma/bulma";
+@import "pages/chats";
 
 html, body {
   height: 90%;
-}
-
-.chat-container {
-  width: 40%;
-  height: 100%;
-  margin: 5px auto;
-}
-
-.messages {
-  height: 80%;
-  overflow: auto;
-}
-
-.message {
-  margin: 10px 0;
-  background-color: whitesmoke;
-}
-
-.me {
-  text-align: right;
-  background-color: ghostwhite;
 }

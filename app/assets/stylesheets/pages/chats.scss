@@ -1,0 +1,32 @@
+.chat-container {
+  height: 100%;
+  margin: 5px auto;
+
+  .messages {
+    width: 83%;
+    height: 90%;
+    margin: 0 auto;
+    overflow: auto;
+    margin-bottom: 15px;
+
+    &::-webkit-scrollbar-track {
+      background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar {
+      width: 10px;
+      border-radius: 50%;
+      background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      background-color: #4a4a4a;
+    }
+  }
+
+  .message-form {
+    width: 83%;
+    margin: 0 auto;
+  }
+}

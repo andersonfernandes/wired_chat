@@ -1,7 +1,15 @@
-<div><%= link_to('Back', chats_path) %></div>
-
 <div class="chat-container">
-  <div>Talking with <strong><%= chat_name(@chat) %></strong></div>
+  <div class="columns is-vcentered">
+    <div class="column is-1">
+      <%= link_to(chats_path, class: 'button is-white') do %>
+        <i class="icon mdi mdi-arrow-left"></i>
+      <% end %>
+    </div>
+
+    <div class="column is-11">
+      Talking with <strong><%= chat_name(@chat) %></strong>
+    </div>
+  </div>
 
   <div class="messages">
     <%= turbo_stream_from @chat, :messages %>
@@ -11,7 +19,7 @@
     <% end %>
   </div>
 
-  <div>
+  <div class="message-form">
     <%= render partial: 'messages/form', locals: { chat_id: @chat.id } %>
   </div>
 </div>

@@ -5,7 +5,9 @@
 
 import "@hotwired/turbo-rails"
 import * as ActiveStorage from "@rails/activestorage"
+
 import "channels"
 import "bulma"
+import "pages/chat"
 
 ActiveStorage.start()
