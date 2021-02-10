@@ -1,24 +1,7 @@
-# README
+# Wired.chat
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple chat application using Google OAuth2 and Hotwire Turbo
 
-Things you may want to cover:
+## Running the application
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A docker development environment is available, so you just need to run `docker-compose up` and the app will be available at http://localhost:5000
