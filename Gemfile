@@ -3,34 +3,33 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.3'
 
-gem 'bootsnap', '>= 1.4.4', require: false
-gem 'jbuilder', '~> 2.7'
-gem 'omniauth-google-oauth2'
+gem 'bootsnap', '~> 1.10', '>= 1.10.2', require: false
+gem 'omniauth-google-oauth2', '~> 1.0', '>= 1.0'
 gem 'pg', '>= 0.18', '< 2.0'
-gem 'puma', '~> 5.0'
+gem 'puma', '~> 5.5', '>= 5.5.2'
 gem 'rails', '~> 6.1.0'
-gem 'redis'
+gem 'redis', '~> 4.5', '>= 4.5.1'
 gem 'sass-rails', '>= 6'
 gem 'turbo-rails', '~> 1.0', '>= 1.0.1'
-gem 'webpacker', '~> 5.0'
+gem 'webpacker', '~> 5.4', '>= 5.4.3'
 
 group :development, :test do
   gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
-  gem 'pry', '~> 0.13.1'
-  gem 'rubocop', '~> 1.7'
+  gem 'pry', '~> 0.14.1'
+  gem 'rubocop', '~> 1.25'
 end
 
 group :development do
   gem 'annotate', '~> 3.1'
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'
-  gem 'spring'
-  gem 'web-console', '>= 4.1.0'
+  gem 'spring', '~> 4.0'
+  gem 'web-console', '~> 4.2'
 end
 
 group :test do
-  gem 'factory_bot_rails', '~> 6.1'
-  gem 'rails-controller-testing'
-  gem 'rspec-rails', '~> 4.0.1'
-  gem 'shoulda-matchers', '~> 4.0'
+  gem 'factory_bot_rails', '~> 6.2'
+  gem 'rails-controller-testing', '~> 1.0', '>= 1.0.5'
+  gem 'rspec-rails', '~> 5.0', '>= 5.0.2'
+  gem 'shoulda-matchers', '~> 5.1'
 end
