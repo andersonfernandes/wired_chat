@@ -11,7 +11,7 @@ gem 'puma', '~> 5.0'
 gem 'rails', '~> 6.1.0'
 gem 'redis'
 gem 'sass-rails', '>= 6'
-gem 'turbo-rails', github: 'hotwired/turbo-rails', branch: 'main'
+gem 'turbo-rails', '~> 1.0', '>= 1.0.1'
 gem 'webpacker', '~> 5.0'
 
 group :development, :test do
