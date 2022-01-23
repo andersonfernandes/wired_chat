@@ -6,10 +6,13 @@
     "@rails/actioncable": "^7.0.1",
     "@rails/activestorage": "^7.0.1",
     "@rails/webpacker": "5.2.1",
-    "bulma": "^0.9.1"
+    "bulma": "^0.9.3"
   },
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3.11.0"
+  },
+  "engines": {
+    "node": "12.X"
   }
 }

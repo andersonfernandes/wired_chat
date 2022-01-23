@@ -5,6 +5,6 @@ Bundler.require(*Rails.groups)
 
 module WiredChat
   class Application < Rails::Application
-    config.load_defaults 6.1
+    config.load_defaults 7.0
   end
 end
