@@ -8,7 +8,7 @@ gem 'omniauth-google-oauth2', '~> 1.0', '>= 1.0'
 gem 'omniauth-rails_csrf_protection', '~> 1.0'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 5.5', '>= 5.5.2'
-gem 'rails', '~> 6.1.0'
+gem 'rails', '~> 7.0', '>= 7.0.1'
 gem 'redis', '~> 4.5', '>= 4.5.1'
 gem 'sass-rails', '>= 6'
 gem 'turbo-rails', '~> 1.0', '>= 1.0.1'
@@ -21,7 +21,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'annotate', '~> 3.1'
+  # gem 'annotate', '~> 3.1'
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'spring', '~> 4.0'
