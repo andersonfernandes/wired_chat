@@ -7,7 +7,7 @@ import "@hotwired/turbo-rails"
 import * as ActiveStorage from "@rails/activestorage"
 
 import "channels"
-import "bulma"
+import "_bulma"
 
 import "pages/chats"
 
