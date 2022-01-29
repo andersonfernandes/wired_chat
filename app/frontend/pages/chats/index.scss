@@ -4,6 +4,13 @@
 
   .chat-header {
     line-height: 40px;
+    width: 90%;
+    position: fixed;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 65px;
+    background-color: #FFFFFF;
+    padding: 0px 0.75em;
   }
 
   .messages {
@@ -12,6 +19,7 @@
     margin: 0 auto;
     overflow: auto;
     margin-bottom: 40px;
+    padding-top: 30px;
 
     &::-webkit-scrollbar-track {
       background-color: #F5F5F5;
@@ -30,8 +38,7 @@
   }
 
   .message-form {
-    width: 80%;
-    margin: 0 auto;
+    width: 90%;
     position: fixed;
     transform: translateX(-50%);
     left: 50%;
