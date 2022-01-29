@@ -1,12 +1,12 @@
 <div class="chat-container">
   <div class="columns is-mobile chat-header">
-    <div class="column is-1">
+    <div class="column is-one-fifth-mobile is-1-desktop">
       <%= link_to(chats_path, class: 'button is-white') do %>
         <i class="icon mdi mdi-arrow-left"></i>
       <% end %>
     </div>
 
-    <div class="column is-11">
+    <div class="column">
       Talking with <strong><%= chat_name(@chat) %></strong>
     </div>
   </div>
