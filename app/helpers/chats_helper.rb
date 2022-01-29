@@ -2,7 +2,8 @@ module ChatsHelper
   def chat_name(chat)
     return chat.name if chat.pool?
 
-    chat.other_users(current_user).first.name
+    user_name = chat.other_users(current_user).first.name
+    user_name.split.first
   end
 
   def chat_info(chat)
