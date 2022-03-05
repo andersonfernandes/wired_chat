@@ -1,0 +1,23 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  SuggestExtensions: false
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'bin/{bundle,spring,setup,rails,rake}'
+  TargetRubyVersion: 3.0.3
+
+Metrics/BlockLength:
+  IgnoredMethods: ['describe', 'context']
+  Exclude:
+    - 'spec/**/*'
+
+Style/Documentation:
+  Enabled: false
+  Exclude:
+    - 'spec/**/*'

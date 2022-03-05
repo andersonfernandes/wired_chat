@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -18,6 +20,9 @@ group :development, :test do
   gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
   gem 'pry', '~> 0.14.1'
   gem 'rubocop', '~> 1.25'
+  gem 'rubocop-performance', '~> 1.13', '>= 1.13.3'
+  gem 'rubocop-rails', '~> 2.13', '>= 2.13.2'
+  gem 'rubocop-rspec', '~> 2.9'
 end
 
 group :development do
