@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ChatsHelper
   def chat_name(chat)
     return chat.name if chat.pool?

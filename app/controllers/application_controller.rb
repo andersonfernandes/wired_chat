@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
@@ -20,6 +22,6 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate!
-    return redirect_to(login_path) unless session[:current_user_id].present?
+    return redirect_to(login_path) if session[:current_user_id].blank?
   end
 end

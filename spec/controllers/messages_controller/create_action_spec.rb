@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe MessagesController, '#create', type: :controller do
@@ -22,11 +24,11 @@ RSpec.describe MessagesController, '#create', type: :controller do
         creator_id: current_user.id,
         chat_id: chat.id
       }
-    end 
+    end
 
     it do
       expect { create_action }
-        .to change { Message.count }
+        .to change(Message, :count)
         .by(1)
     end
 
@@ -43,11 +45,11 @@ RSpec.describe MessagesController, '#create', type: :controller do
         creator_id: nil,
         chat_id: nil
       }
-    end 
+    end
 
     it do
       expect { create_action }
-        .not_to change { Message.count }
+        .not_to change(Message, :count)
     end
 
     it do

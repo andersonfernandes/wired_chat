@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: messages
@@ -24,7 +26,7 @@ class Message < ApplicationRecord
   belongs_to :creator, class_name: 'User', inverse_of: :messages
   belongs_to :chat, inverse_of: :messages
 
-  validates :text, :creator, presence: true
+  validates :text, presence: true
 
   after_create_commit { broadcast_append_to chat, :messages }
   after_update_commit { broadcast_replace_to chat, :messages }

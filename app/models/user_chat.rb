@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: user_chats
@@ -23,7 +25,7 @@ class UserChat < ApplicationRecord
   belongs_to :user, inverse_of: :user_chats
   belongs_to :chat, inverse_of: :user_chats
 
-  enum role: %i[admin member]
+  enum role: { admin: 0, member: 1 }
 
-  validates :role, :chat, :user, presence: true
+  validates :role, presence: true
 end

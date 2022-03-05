@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 2020_12_29_020149) do
   create_table "messages", force: :cascade do |t|
     t.string "text", null: false
     t.boolean "seen", default: false, null: false
-    t.integer "creator_id", null: false
-    t.integer "chat_id", null: false
+    t.bigint "creator_id", null: false
+    t.bigint "chat_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["chat_id"], name: "index_messages_on_chat_id"
@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(version: 2020_12_29_020149) do
   end
 
   create_table "user_chats", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "chat_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "chat_id", null: false
     t.integer "role", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2020_12_29_020149) do
     t.string "google_refresh_token"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   add_foreign_key "messages", "chats"

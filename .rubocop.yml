@@ -21,3 +21,6 @@ Style/Documentation:
   Enabled: false
   Exclude:
     - 'spec/**/*'
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false

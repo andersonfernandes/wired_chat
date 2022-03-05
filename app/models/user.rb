@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: users
@@ -12,9 +14,9 @@
 #  updated_at           :datetime         not null
 #
 class User < ApplicationRecord
-  has_many :user_chats, inverse_of: :user
+  has_many :user_chats, inverse_of: :user, dependent: :destroy
   has_many :chats, through: :user_chats
-  has_many :messages, inverse_of: :creator
+  has_many :messages, inverse_of: :creator, dependent: :destroy
 
   validates :email, uniqueness: { case_sensitive: false }
   validates :name, :email, presence: true
