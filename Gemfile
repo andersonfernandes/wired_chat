@@ -6,6 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.3'
 
 gem 'bootsnap', '~> 1.10', '>= 1.10.2', require: false
+gem 'interactor-rails', '~> 2.2', '>= 2.2.1'
 gem 'omniauth-google-oauth2', '~> 1.0', '>= 1.0'
 gem 'omniauth-rails_csrf_protection', '~> 1.0'
 gem 'pg', '>= 0.18', '< 2.0'
