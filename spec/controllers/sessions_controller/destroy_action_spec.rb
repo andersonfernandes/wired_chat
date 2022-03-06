@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
-
-RSpec.describe SessionsController, '#destroy', type: :controller do
+describe SessionsController, '#destroy', type: :controller do
   before { delete :destroy }
 
   it { expect(session[:current_user_id]).to be_nil }

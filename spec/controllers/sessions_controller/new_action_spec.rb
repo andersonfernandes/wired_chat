@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
-
-RSpec.describe SessionsController, '#new', type: :controller do
+describe SessionsController, '#new', type: :controller do
   before { get(:new, session: { current_user_id: current_user_id }) }
 
   context 'when the user is not authenticated' do

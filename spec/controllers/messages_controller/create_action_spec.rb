@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
-
-RSpec.describe MessagesController, '#create', type: :controller do
+describe MessagesController, '#create', type: :controller do
   let(:current_user) { create(:user) }
   let(:user) { create(:user) }
   let(:chat) do

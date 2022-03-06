@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
-
-RSpec.describe ChatsController, '#index', type: :controller do
+describe ChatsController, '#index', type: :controller do
   let(:current_user) { create(:user) }
 
   let(:user1) { create(:user) }

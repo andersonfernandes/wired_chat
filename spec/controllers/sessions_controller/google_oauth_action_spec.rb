@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
-
-RSpec.describe SessionsController, '#google_oauth', type: :controller do
+describe SessionsController, '#google_oauth', type: :controller do
   let(:omniauth_info) { OmniAuth.config.mock_auth[:google] }
   let(:google_oauth_action) { get(:google_oauth, session: {}) }
 
