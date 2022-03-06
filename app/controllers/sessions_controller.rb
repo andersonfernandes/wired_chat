@@ -6,18 +6,9 @@ class SessionsController < ApplicationController
   end
 
   def google_oauth
-    auth = request.env['omniauth.auth']
-    user = User.where(email: auth.info.email).first_or_initialize do |u|
-      u.name = auth.info.name
-      u.email = auth.info.email
-      u.image_url = auth.info.image
-    end
-    user.google_token = auth.credentials.token
-    refresh_token = auth.credentials.refresh_token
-    user.google_refresh_token = refresh_token if refresh_token.present?
-    user.save
+    result = ::Sessions::UpsertUser.call(auth_data: request.env['omniauth.auth'])
 
-    login(user)
+    login(result.user)
     redirect_to root_path
   end
 
