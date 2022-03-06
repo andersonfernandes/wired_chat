@@ -13,7 +13,7 @@ AllCops:
   TargetRubyVersion: 3.0.3
 
 Metrics/BlockLength:
-  IgnoredMethods: ['describe', 'context']
+  IgnoredMethods: ['describe', 'context', 'task']
   Exclude:
     - 'spec/**/*'
 

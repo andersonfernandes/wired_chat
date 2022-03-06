@@ -4,12 +4,12 @@
 #
 # Table name: user_chats
 #
-#  id         :integer          not null, primary key
+#  id         :bigint(8)        not null, primary key
 #  role       :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  chat_id    :integer          not null
-#  user_id    :integer          not null
+#  chat_id    :bigint(8)        not null
+#  user_id    :bigint(8)        not null
 #
 # Indexes
 #
@@ -18,8 +18,8 @@
 #
 # Foreign Keys
 #
-#  chat_id  (chat_id => chats.id)
-#  user_id  (user_id => users.id)
+#  fk_rails_...  (chat_id => chats.id)
+#  fk_rails_...  (user_id => users.id)
 #
 class UserChat < ApplicationRecord
   belongs_to :user, inverse_of: :user_chats

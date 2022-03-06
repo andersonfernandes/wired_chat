@@ -27,7 +27,7 @@ group :development, :test do
 end
 
 group :development do
-  # gem 'annotate', '~> 3.1' TODO: Wait until the support gets enabled by the developer. Ref.: https://github.com/ctran/annotate_models/issues/910
+  gem 'annotate', '~> 3.2'
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'spring', '~> 4.0'
