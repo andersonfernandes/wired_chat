@@ -3,7 +3,6 @@
 describe Message, type: :model do
   describe 'validations' do
     it { is_expected.to validate_presence_of(:text) }
-    it { is_expected.to validate_presence_of(:creator) }
   end
 
   describe 'associations' do
