@@ -19,7 +19,7 @@ module ChatsHelper
     other_users = chat.other_users(current_user)
     image = chat.pool? ? 'group-chat.png' : other_users.first.image_url
 
-    image_tag(image, class: 'is-rounded')
+    image_tag(image, referrerpolicy: 'no-referrer')
   end
 
   def chat_last_message_at(chat)
