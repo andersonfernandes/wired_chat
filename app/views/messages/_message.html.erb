@@ -1,5 +1,5 @@
 <%= turbo_frame_tag dom_id(message) do %>
-  <div class="box p-3 m-4 <%= message.creator == current_user ? 'has-background-success-light has-text-right' : 'has-background-info-light' %>">
+  <div>
     <small><%= "#{message.creator.name} <#{message.creator.email}>" %> says:</small>
     <div><%= message.text %></div>
     <small><%= l message.created_at, format: :short %></small>

@@ -6,16 +6,15 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbo-track': 'reload' %>
-
     <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css" data-turbo-track="reload">
+
+    <%= javascript_importmap_tags %>
   </head>
 
   <body>
     <%= render 'layouts/menu' %>
 
-    <main class="container">
+    <main>
       <%= yield %>
     </main>
   </body>

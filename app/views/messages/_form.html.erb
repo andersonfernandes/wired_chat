@@ -2,15 +2,13 @@
   <%= form.hidden_field :creator_id, value: current_user.id %>
   <%= form.hidden_field :chat_id, value: chat_id %>
 
-  <div class="columns is-mobile">
-    <div class="field column is-11">
-      <div class="control">
-        <%= form.text_field :text, autofocus: true, class: 'input is-small send-message' %>
-      </div>
+  <div>
+    <div>
+      <%= form.text_field :text, autofocus: true %>
     </div>
 
-    <div class="column is-1">
-      <%= button_tag type: :submit, class: 'button is-small is-white' do %>
+    <div>
+      <%= button_tag type: :submit do %>
         <i class="icon mdi mdi-send"></i>
       <% end %>
     </div>
