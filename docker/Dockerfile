@@ -7,10 +7,7 @@ RUN apk add --update --no-cache \
   sudo \
   libpq-dev \
   tzdata \
-  vips-dev \
-  npm
-
-RUN npm install -g yarn
+  vips-dev
 
 RUN mkdir -p /wired_chat
 WORKDIR /wired_chat

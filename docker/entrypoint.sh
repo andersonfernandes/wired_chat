@@ -2,7 +2,6 @@
 set -e
 
 bundle install
-yarn install
 
 [ -e tmp/pids/server.pid ] && rm tmp/pids/server.pid
 
