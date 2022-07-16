@@ -7,7 +7,8 @@ RUN apk add --update --no-cache \
   sudo \
   libpq-dev \
   tzdata \
-  vips-dev
+  vips-dev \
+  npm
 
 RUN mkdir -p /wired_chat
 WORKDIR /wired_chat

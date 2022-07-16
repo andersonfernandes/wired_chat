@@ -6,15 +6,16 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.1.2'
 
 gem 'bootsnap', '~> 1.10', '>= 1.10.2', require: false
+gem 'bootstrap', '~> 5.1'
 gem 'interactor-rails', '~> 2.2', '>= 2.2.1'
-gem "importmap-rails", "~> 1.1"
+gem 'importmap-rails', '~> 1.1'
 gem 'omniauth-google-oauth2', '~> 1.0', '>= 1.0'
 gem 'omniauth-rails_csrf_protection', '~> 1.0'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 5.6'
 gem 'rails', '~> 7.0', '>= 7.0.3'
 gem 'redis', '~> 4.5', '>= 4.5.1'
-gem 'sass-rails', '>= 6'
+gem 'sassc-rails', '~> 2.1'
 gem 'turbo-rails', '~> 1.0', '>= 1.0.1'
 
 group :development, :test do

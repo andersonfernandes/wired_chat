@@ -1,7 +1,7 @@
 <div>
   <h2>Login with your Google account and start chatting.</h2>
 
-  <%= button_to '/auth/google_oauth2', title: 'Login With Google', method: :post, data: { turbo: false } do %>
+  <%= button_to '/auth/google_oauth2', title: 'Login With Google', class: 'btn btn-success', method: :post, data: { turbo: false } do %>
     <i class="icon mdi mdi-google"></i>
     <span>Google Login</span>
   <% end %>

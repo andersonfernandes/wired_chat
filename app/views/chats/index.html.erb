@@ -1,14 +1,14 @@
-<h3>Recent chats:</h3>
+<h4>Recent chats:</h4>
 
-<div>
+<div class="row justify-content-start">
   <% @chats.each do |chat| %>
-    <%= link_to(chat_path(chat)) do %>
-      <div>
-        <div>
+    <%= link_to(chat_path(chat), class: 'col-4') do %>
+      <div class="row">
+        <div class="col-4">
           <%= chat_image(chat) %>
         </div>
 
-        <div>
+        <div class="col">
           <strong> <%= "#{chat_name(chat)} (#{chat.messages.size})" %> </strong>
 
           <div>
